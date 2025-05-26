@@ -5,6 +5,8 @@
 
 This repository is an example of how to use [Bazel](https://bazel.build) to build a C++ project on [Buildkite](https://buildkite.com).
 
+<a href="https://buildkite.com/buildkite/bazel-example/builds/3"><img width="1491" alt="Screenshot of Buildkite Bazel example pipeline" src=".buildkite/screenshot.png" /></a>
+
 ## How does it work?
 
 The empty `WORKSPACE` file marks the directory as a Bazel workspace, and the `main/BUILD` contains the Bazel build targets.
