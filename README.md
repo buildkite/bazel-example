@@ -53,6 +53,18 @@ ADD --chmod=0755 https://github.com/bazelbuild/bazelisk/releases/download/v1.26.
 #ADD --chmod=0755 https://releases.bazel.build/8.2.1/release/bazel-8.2.1-${TARGETOS}-${TARGETARCH} /usr/local/bin/bazel
 ```
 
+On macOS, you can use [Homebrew](https://brew.sh) to [install the Buildkite Agent](https://buildkite.com/docs/agent/v3/macos) and Bazelisk:
+
+```
+brew install bazelisk
+```
+
+Homebrew should prompt you to install Xcode Command Line Tools which includes a C++ compiler. If not:
+
+```
+xcode-select --install
+```
+
 ## License
 
 See [License.md](License.md) (MIT)
