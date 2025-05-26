@@ -30,10 +30,10 @@ If you want to test the result by running the resulting binary, add the followin
 
 ## Prerequisites
 
-You'll need some dependencies installed alongside your Buildkite Agent:
+You'll need some dependencies installed alongside your [Buildkite Agent](https://buildkite.com/docs/agent/v3):
 
-- [Bazel](https://bazel.build)
-- C compiler, like GCC
+- [Bazel](https://bazel.build) - we recommend using [Bazelisk](https://github.com/bazelbuild/bazelisk)
+- C++ compiler, like GCC
 
 An example Dockerfile for an image with the agent and these dependencies:
 
@@ -43,12 +43,14 @@ FROM buildkite/agent:3
 # Install gcc etc
 RUN apt-get update && apt-get install -y build-essential
 
-ARG BAZEL_VERSION=8.2.1
 ARG TARGETOS
 ARG TARGETARCH
 
-# Install bazel
-ADD --chmod=0755 https://releases.bazel.build/${BAZEL_VERSION}/release/bazel-${BAZEL_VERSION}-${TARGETOS}-${TARGETARCH} /usr/local/bin/bazel
+# Install bazelisk
+ADD --chmod=0755 https://github.com/bazelbuild/bazelisk/releases/download/v1.26.0/bazelisk-${TARGETOS}-${TARGETARCH} /usr/local/bin/bazel
+
+# or a specific version of Bazel, if you want to lock it down
+#ADD --chmod=0755 https://releases.bazel.build/8.2.1/release/bazel-8.2.1-${TARGETOS}-${TARGETARCH} /usr/local/bin/bazel
 ```
 
 ## License
