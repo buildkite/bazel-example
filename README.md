@@ -1,5 +1,6 @@
 # Building with Bazel on Buildkite
 
+[![Build status](https://badge.buildkite.com/e21216a03d600c23dbc8329539efc088264fae90e5a81940f2.svg?branch=main)](https://buildkite.com/buildkite/bazel-example)
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
 This repository is an example of how to use [Bazel](https://bazel.build) to build a C++ project on [Buildkite](https://buildkite.com).
