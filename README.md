@@ -1,17 +1,24 @@
-# Building with Bazel on Buildkite
+# Buildkite Bazel Pipeline Example
 
 [![Build status](https://badge.buildkite.com/e21216a03d600c23dbc8329539efc088264fae90e5a81940f2.svg?branch=main)](https://buildkite.com/buildkite/bazel-example)
+[![Add to Buildkite](https://img.shields.io/badge/Add%20to%20Buildkite-14CC80)](https://buildkite.com/new)
+
+This repository is an example [Buildkite](https://buildkite.com/) pipeline that uses [Bazel](https://bazel.build) to build a C++ project.
+
+👉 **See this example in action:** [buildkite.com/buildkite/bazel-example](https://buildkite.com/buildkite/bazel-example/builds/latest)
+
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
-This repository is an example of how to use [Bazel](https://bazel.build) to build a C++ project on [Buildkite](https://buildkite.com).
+<a href="https://buildkite.com/buildkite/bazel-example/builds/latest?branch=main">
+  <img width="1491" alt="Screenshot of Buildkite Bazel example pipeline" src=".buildkite/screenshot.png" />
+</a>
 
-<a href="https://buildkite.com/buildkite/bazel-example/builds/3"><img width="1491" alt="Screenshot of Buildkite Bazel example pipeline" src=".buildkite/screenshot.png" /></a>
+<!-- docs:start -->
+## How it works
 
-## How does it work?
+The empty `WORKSPACE` file marks the directory as a Bazel workspace, and `main/BUILD` defines the build targets.
 
-The empty `WORKSPACE` file marks the directory as a Bazel workspace, and the `main/BUILD` contains the Bazel build targets.
-
-The Buildkite [pipeline.yml](.buildkite/pipeline.yml) file tells Bazel to build the `hello-world` target in `main/BUILD`:
+The [pipeline.yml](.buildkite/pipeline.yml) tells Bazel to build the `hello-world` target in `main/BUILD`:
 
 ```yml
 steps:
@@ -28,7 +35,7 @@ If you want to test the result by running the resulting binary, add the followin
         - bazel-bin/main/hello-world
 ```
 
-## Prerequisites
+## Setup
 
 You'll need some dependencies installed alongside your [Buildkite Agent](https://buildkite.com/docs/agent/v3):
 
@@ -64,6 +71,7 @@ Homebrew should prompt you to install Xcode Command Line Tools which includes a 
 ```
 xcode-select --install
 ```
+<!-- docs:end -->
 
 ## License
 

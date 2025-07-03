@@ -1,5 +1,10 @@
-# Used by the 'Add to Buildkite' button in the readme
 name: "Bazel Example"
+description: "An example pipeline that uses Bazel to build a C++ project on Buildkite."
+emoji: ":bazel:"
+color: "gray-100"
+languages:
+  - "C++"
+  - "Shell"
 steps:
   - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
