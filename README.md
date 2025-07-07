@@ -75,4 +75,4 @@ xcode-select --install
 
 ## License
 
-See [License.md](License.md) (MIT)
+See [LICENSE](LICENSE) (MIT)
