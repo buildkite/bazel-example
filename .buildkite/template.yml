@@ -3,7 +3,6 @@ description: "An example pipeline that uses Bazel to build a C++ project on Buil
 emoji: ":bazel:"
 languages:
   - "C++"
-  - "Shell"
   - "Starlark"
 steps:
   - label: ":pipeline:"
