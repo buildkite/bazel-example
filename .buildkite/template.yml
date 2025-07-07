@@ -4,6 +4,7 @@ emoji: ":bazel:"
 languages:
   - "C++"
   - "Shell"
+  - "Starlark"
 steps:
   - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
